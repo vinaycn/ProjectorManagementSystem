@@ -1,0 +1,31 @@
+spring:
+  profiles:
+    active:
+    - dev
+---
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost/ProjectorManagement
+    username: postgres
+    password: postgres
+  jpa:
+    generate-ddl: true
+  profiles: dev
+    
+logging:
+  level:
+    ROOT: ERROR
+    org.springframework: ERROR
+    org.springframework.data: ERROR
+    org.projector_management_system.controller: INFO
+    org.projector_management_system.ExceptionHandling.ExceptionController: ERROR
+    org.projector_management_system.busisness.ConvertDate: INFO
+    org.projector_management_system.configuration.ConfigurationMVC: INFO
+    org.projector_management_system.service: INFO
+  config: classpath:logback-spring.xml
+  file: log/Mydevlog.log
+  
+  pattern:
+    file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
+  
