@@ -3,6 +3,7 @@ package org.projector_management_system.configuration;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Locale;
+import java.util.TimeZone;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -26,6 +27,8 @@ public class ConfigurationMVC extends WebMvcConfigurerAdapter {
 	
 	@Bean
 	public DateFormat getSimpleDateFormat(){
-		return new SimpleDateFormat("MM/dd/yyyy HH:mm",Locale.US);
+		DateFormat sdf = new SimpleDateFormat("MM/dd/yyyy HH:mm");
+		sdf.setTimeZone(TimeZone.getTimeZone("PST"));
+		return sdf;
 	}
 }
