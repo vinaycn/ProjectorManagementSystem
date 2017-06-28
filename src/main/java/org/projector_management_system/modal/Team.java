@@ -45,6 +45,12 @@ public class Team implements Serializable {
 		this.teamReservations = teamReservations;
 	}
 	
+	public Team(String name) {
+		this.name = name;
+	}
 	
+	public Team() {
+		// TODO Auto-generated constructor stub
+	}
 	
 }

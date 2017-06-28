@@ -1,7 +1,5 @@
 package org.projector_management_system.service;
 
-import static org.springframework.test.web.client.match.MockRestRequestMatchers.xpath;
-
 import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
@@ -9,13 +7,11 @@ import java.util.Set;
 
 import org.projector_management_system.modal.Projector;
 import org.projector_management_system.modal.ReserveProjector;
-import org.projector_management_system.modal.ReservedProjectorWrapper;
 import org.projector_management_system.modal.Team;
 import org.projector_management_system.repository.ProjectorManagementRepo;
 import org.projector_management_system.repository.ProjectorReservationRepo;
 import org.projector_management_system.repository.TeamRepo;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.security.oauth2.resource.ResourceServerProperties;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

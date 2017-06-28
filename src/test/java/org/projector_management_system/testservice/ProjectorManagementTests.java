@@ -15,12 +15,10 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.projector_management_system.modal.Projector;
-import org.projector_management_system.modal.Team;
 import org.projector_management_system.repository.ProjectorManagementRepo;
 import org.projector_management_system.repository.ProjectorReservationRepo;
 import org.projector_management_system.repository.TeamRepo;
 import org.projector_management_system.service.ProjectorManagementService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
