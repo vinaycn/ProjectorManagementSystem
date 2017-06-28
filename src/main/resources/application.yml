@@ -1,7 +1,7 @@
 spring:
   profiles:
     active:
-    - dev
+    - prod
 ---
 spring:
   datasource:
@@ -24,6 +24,33 @@ logging:
     org.projector_management_system.service: INFO
   config: classpath:logback-spring.xml
   file: log/Mydevlog.log
+  
+  pattern:
+    file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
+    
+---
+spring:
+  datasource:
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+  jpa:
+    generate-ddl: true
+  profiles: prod
+    
+logging:
+  level:
+    ROOT: ERROR
+    org.springframework: ERROR
+    org.springframework.data: ERROR
+    org.projector_management_system.controller: INFO
+    org.projector_management_system.ExceptionHandling.ExceptionController: ERROR
+    org.projector_management_system.busisness.ConvertDate: INFO
+    org.projector_management_system.configuration.ConfigurationMVC: INFO
+    org.projector_management_system.service: INFO
+  config: classpath:logback-spring.xml
+  file: log/MyProdlog.log
   
   pattern:
     file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
