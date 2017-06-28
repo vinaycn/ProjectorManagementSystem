@@ -28,7 +28,7 @@ public class ConfigurationMVC extends WebMvcConfigurerAdapter {
 	@Bean
 	public DateFormat getSimpleDateFormat(){
 		DateFormat sdf = new SimpleDateFormat("MM/dd/yyyy HH:mm");
-		sdf.setTimeZone(TimeZone.getTimeZone("PST"));
+		sdf.setTimeZone(TimeZone.getTimeZone("America/Los_Angeles"));
 		return sdf;
 	}
 }
