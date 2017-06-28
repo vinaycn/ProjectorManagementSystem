@@ -9,16 +9,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 
-
+@Component
 public class ConvertDate {
 
 	@Autowired
-	private static DateFormat dateFormat;
+	private DateFormat dateFormat;
 	
 	
 	
 	
-	public static long convertDate(String date) throws ParseException{
+	public long convertDate(String date) throws ParseException{
 		Date date1 = dateFormat.parse(date);
 		long time = date1.getTime();
 		return time;

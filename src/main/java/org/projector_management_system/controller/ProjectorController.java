@@ -24,6 +24,8 @@ public class ProjectorController {
 	@Autowired
 	private ProjectorManagementService projectorManagementService;
 
+	@Autowired
+	private ConvertDate convertDate;
 	
 
 	@RequestMapping(value = "/add-projector", method = RequestMethod.POST)
@@ -55,8 +57,8 @@ public class ProjectorController {
 	@RequestMapping(value = "/make-reservation", method = RequestMethod.POST)
 	public String makeProjectorReservation(@RequestParam String teamId, @RequestParam String from,
 			@RequestParam String to) throws NumberFormatException, ParseException {
-		System.out.println("Making Reservations");
-		return projectorManagementService.reserveProjector(Integer.valueOf(teamId),ConvertDate.convertDate(from),
-				ConvertDate.convertDate(to));
+		logger.info("-- User Requesting for a Projector --");
+		return projectorManagementService.reserveProjector(Integer.valueOf(teamId),convertDate.convertDate(from),
+				convertDate.convertDate(to));
 	}
 }
