@@ -33,13 +33,24 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6">
-				<form class="form-inline" ng-submit="addTeam()">
+
+				<form class="form-inline" name="teamForm"
+					ng-submit="teamForm.$valid&&addTeam()">
+					<p style="color: Red" ng-show="teamForm.team.$error.required">
+						Team Name is Required!</p>
+					<p style="color: Red"
+						ng-show="teamForm.team.$dirty&&teamForm.team.$error.pattern">
+						Please Enter an Valid Name!</p>
 					<div class="form-group">
 						<label for="exampleInputName2">Name of the Team</label> <input
-							type="text" class="form-control" ng-model="team.name"
-							id="exampleInputName2" placeholder="Enter Team Name..">
+							type="text" class="form-control" name="team" ng-model="team.name"
+							ng-change="checkTeamName()" id="exampleInputName2"
+							placeholder="Enter Team Name.." required="required"
+							ng-pattern="/^[a-z0-9]+$/i">
 					</div>
-					<button type="submit" class="btn btn-default">Add Team</button>
+
+					<button type="submit" ng-disabled="isTNameDuplicate" class="btn btn-default">Add Team</button>
+
 				</form>
 				<table class="table table-hover">
 					<caption>Teams List</caption>
@@ -57,7 +68,8 @@
 							<td><p data-placement="top" data-toggle="tooltip"
 									title="Delete">
 									<button class="btn btn-danger btn-xs" data-title="Delete"
-										data-toggle="modal" ng-click="deleteTeam(team.teamId)" data-target="#delete">
+										data-toggle="modal" ng-click="deleteTeam(team.teamId)"
+										data-target="#delete">
 										<span class="glyphicon glyphicon-trash"></span>
 									</button>
 								</p></td>
@@ -67,15 +79,26 @@
 			</div>
 
 			<div class="col-md-6">
-				<form class="form-inline" ng-submit="addProjector()">
+				<form class="form-inline" name="projectorForm"
+					ng-submit="projectorForm.$valid&&addProjector()">
+					<p style="color: Red"
+						ng-show="projectorForm.projector.$error.required">Projector
+						Name is Required!</p>
+					<p style="color: Red"
+						ng-show="projectorForm.projector.$dirty&&projectorForm.projector.$error.pattern">
+						Please Enter an Valid Name!</p>
 					<div class="form-group">
 						<label for="exampleInputName2">Name of the Projector</label> <input
-							type="text" class="form-control" ng-model="projector.name"
-							id="exampleInputName2" required="required"
-							placeholder="Enter Projector Name..">
+							type="text" name="projector" class="form-control"
+							ng-model="projector.name" ng-change="projectorNameValidation()"
+							ng-pattern="/^[a-z0-9]+$/i" id="exampleInputName2"
+							required="required" placeholder="Enter Projector Name..">
+
 					</div>
 					<button type="submit" class="btn btn-default">Add
 						Projector</button>
+
+
 				</form>
 				<table class="table table-hover">
 					<caption>Projector List</caption>
@@ -92,7 +115,8 @@
 							<td><p data-placement="top" data-toggle="tooltip"
 									title="Delete">
 									<button class="btn btn-danger btn-xs" data-title="Delete"
-										data-toggle="modal" ng-click="deleteProjector(projector.id)" data-target="#delete">
+										data-toggle="modal" ng-click="deleteProjector(projector.id)"
+										data-target="#delete">
 										<span class="glyphicon glyphicon-trash"></span>
 									</button>
 								</p></td>

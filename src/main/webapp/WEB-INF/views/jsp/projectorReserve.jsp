@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html ng-app="projectorManagement">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -22,9 +22,14 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
-				<h1>You Can Book Your Projector Here!</h1>
+				<h1>You Can Reserve your Projector Here!</h1>
+				<span class="pull-right"> <a href="home"
+					class="btn btn-default">Back To Admin</a>
+				</span>
 			</div>
 		</div>
+	</div>
+	<div class="container">
 		<br/>
 		<div class="row">
 			<div class="col-md-3"></div>
@@ -33,8 +38,8 @@
 				<form method="post" id="projectRequestForm">
 					<div class="form-group">
 						<label for="datetimepicker6">Start Time:</label>
-						<div class='input-group date' id="datetimepicker6">
-							<input type='text' class="form-control" id="from" required /> <span
+						<div class='datepicker-input input-group date' id="datetimepicker6">
+							<input type='text' class="form-control" id="from" required="required"/> <span
 								class="input-group-addon"> <span
 								class="glyphicon glyphicon-calendar"></span>
 							</span>
@@ -42,8 +47,8 @@
 					</div>
 					<div class="form-group">
 						<label for="datetimepicker7">End Time:</label>
-						<div class='input-group date' id='datetimepicker7'>
-							<input type='text'  class="form-control" id="to" required> <span
+						<div class='datepicker-input input-group date' id='datetimepicker7'>
+							<input type='text'  class="form-control" id="to" required="required"> <span
 								class="input-group-addon" > <span
 								class="glyphicon glyphicon-calendar"></span>
 							</span>
@@ -118,14 +123,14 @@
 		$(function() {
 			$('#datetimepicker6').datetimepicker({
 				minDate : new Date(),
-				format: 'MM/DD/YYYY HH:mm'
-				
-			});
+				format: 'MM/DD/YYYY HH:mm'		
+			}).on()
 			$('#datetimepicker7').datetimepicker({
 				useCurrent : false,
 				format: 'MM/DD/YYYY HH:mm'
 			//Important! See issue #1075
 			});
+			
 			$("#datetimepicker6").on("dp.change", function(e) {
 				$('#datetimepicker7').data("DateTimePicker").minDate(e.date);
 			});

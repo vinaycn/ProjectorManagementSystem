@@ -24,6 +24,34 @@ app.controller('adminController',['$scope','adminService',function($scope,adminS
 		$scope.getProjectors();
 	};
 	
+	 $scope.isTNameDuplicate= false;
+	 $scope.isPNameDuplicate = false;
+	 
+	 
+	 var isDuplicate = false;
+	$scope.checkTeamName = function(){	
+		 $scope.teams.forEach(function (element) {
+	         if (JSON.stringify(element.name) === JSON.stringify($scope.team.name)) {
+	        	 $scope.isTNameDuplicate = true;
+	        	 isDuplicate=true;
+	        	 return false;
+	         }
+	     });
+		 if(!isDuplicate){
+			 $scope.isTNameDuplicate=false;
+		 }
+	}
+	
+	$scope.checkProjectorName = function(){
+		
+		 $scope.projectors.forEach(function (element) {
+	         if (JSON.stringify(element.name) === JSON.stringify($scope.projector.name)) {       
+	        	 $scope.isPNameDuplicate = true;
+	        	 return false;
+	         }
+	     });
+	}
+	
 	
 	
 	$scope.addTeam = function(){
