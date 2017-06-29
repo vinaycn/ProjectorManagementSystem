@@ -1,20 +1,15 @@
 package org.projectorManagementSystem.ExceptionHandling;
 
+import javax.servlet.http.HttpServletRequest;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.ResponseStatus;
-
-import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.log;
-
-import javax.servlet.http.HttpServletRequest;
-
-import org.projectorManagementSystem.controller.ProjectorManagementController;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.http.HttpRequest;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;;
+import org.springframework.web.bind.annotation.ResponseStatus;;
 
 @ControllerAdvice
 public class ExceptionController {
