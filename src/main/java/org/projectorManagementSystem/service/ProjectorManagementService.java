@@ -1,7 +1,5 @@
 package org.projectorManagementSystem.service;
 
-import java.text.DateFormat;
-import java.text.ParseException;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
@@ -16,8 +14,6 @@ import org.projectorManagementSystem.repository.TeamRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
-import net.minidev.asm.ConvertDate;
 
 @Service
 public class ProjectorManagementService implements IProjectorManagementService {
