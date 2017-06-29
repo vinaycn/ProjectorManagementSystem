@@ -22,7 +22,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
-				<h1>You Can Reserve your Projector Here!</h1>
+				<h1>Reserve your projector</h1>
 				<span class="pull-right"> <a href="home"
 					class="btn btn-default">Back To Admin</a>
 				</span>
@@ -78,7 +78,7 @@
 				<div class="form-group">
 				</div>
 				<table class="table table-hover">
-					<caption>Teams List</caption>
+					<caption>Projector Reservations</caption>
 					<thead>
 						<tr>
 							<th>#</th>

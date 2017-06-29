@@ -28,38 +28,35 @@ app.controller('adminController',['$scope','adminService',function($scope,adminS
 	 $scope.isPNameDuplicate = false;
 	 
 	 
-	 var isDuplicate = false;
+	 
 	$scope.checkTeamName = function(){	
-		 $scope.teams.forEach(function (element) {
-	         if (JSON.stringify(element.name) === JSON.stringify($scope.team.name)) {
-	        	 $scope.isTNameDuplicate = true;
-	        	 isDuplicate=true;
-	        	 return false;
-	         }
-	     });
+		 
 		 if(!isDuplicate){
 			 $scope.isTNameDuplicate=false;
 		 }
 	}
 	
-	$scope.checkProjectorName = function(){
-		
-		 $scope.projectors.forEach(function (element) {
-	         if (JSON.stringify(element.name) === JSON.stringify($scope.projector.name)) {       
-	        	 $scope.isPNameDuplicate = true;
-	        	 return false;
+	
+	
+	
+	var isTeamDuplicate = false;
+	$scope.addTeam = function(){
+		$scope.teams.forEach(function (element) {
+	         if (JSON.stringify(element.name).toUpperCase() === JSON.stringify($scope.team.name).toUpperCase()) {
+	        	 $scope.isTNameDuplicate = true;
+	        	 isDuplicate=true;
+	        	
 	         }
 	     });
-	}
-	
-	
-	
-	$scope.addTeam = function(){
 		
+		if(!isTeamDuplicate){
 		adminService.addTeam($scope.team.name,function(data){
 			$scope.teams = data;
 			$scope.team.name="";
 		});
+		}else{
+			alert("Team Name already Exists!");
+		}
 	};
 	
 	$scope.deleteTeam = function(id){
@@ -69,11 +66,24 @@ app.controller('adminController',['$scope','adminService',function($scope,adminS
 			});
 		};
 	
-	$scope.addProjector = function(){
-		adminService.addProjector($scope.projector.name,function(data){
-			$scope.projectors = data;
-			$scope.projector.name="";
-		});
+	var isDuplicate = false;
+	$scope.addProjector = function(){	
+		$scope.projectors.forEach(function (element) {
+			alert(JSON.stringify($scope.projector.name).toUpperCase());
+	         if (JSON.stringify(element.name).toUpperCase() === JSON.stringify($scope.projector.name).toUpperCase()) {       
+	        	 isDuplicate = true;
+	         }
+	     });
+		
+		if(!isDuplicate){
+			adminService.addProjector($scope.projector.name,function(data){
+				$scope.projectors = data;
+				$scope.projector.name="";
+			});
+		}else{
+			alert("Project Name already Exists!");
+		}
+		
 	};
 	
 	$scope.deleteProjector = function(id){
