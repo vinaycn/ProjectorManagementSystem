@@ -31,13 +31,29 @@ $(function() {
                 success: function(status) {
                 	//alert(status);
                 	
-                    $('#success').html("<div class='alert alert-success'>");
-                    $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
-                        .append("</button>");
-                    $('#success > .alert-success')
-                        .append("<strong>" + status + "</strong>");
-                    $('#success > .alert-success')
-                        .append('</div>');
+                	
+                	var statusArray = status.split('@');
+                	if(statusArray.length==1){
+                		$('#success').html("<div class='alert alert-success'>");
+                        $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
+                            .append("</button>");
+                        $('#success > .alert-success')
+                            .append("<strong>" + status + "</strong>");
+                        $('#success > .alert-success')
+                            .append('</div>');
+                	}
+                	else{
+                		//alert(statusArray[1]);
+                		var n = Number(statusArray[1]);
+                		var date = new Date(n);
+                		$('#success').html("<div class='alert alert-success'>");
+                        $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
+                            .append("</button>");
+                        $('#success > .alert-success')
+                            .append("<strong>" + statusArray[0]+ " "+ date + "</strong>");
+                        $('#success > .alert-success')
+                            .append('</div>');
+                	}
 
                     //clear all fields
                     $('#projectRequestForm').trigger("reset");
