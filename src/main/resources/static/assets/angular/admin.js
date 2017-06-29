@@ -43,8 +43,7 @@ app.controller('adminController',['$scope','adminService',function($scope,adminS
 	$scope.addTeam = function(){
 		$scope.teams.forEach(function (element) {
 	         if (JSON.stringify(element.name).toUpperCase() === JSON.stringify($scope.team.name).toUpperCase()) {
-	        	 $scope.isTNameDuplicate = true;
-	        	 isDuplicate=true;
+	        	 isTeamDuplicate=true;
 	        	
 	         }
 	     });
@@ -69,7 +68,6 @@ app.controller('adminController',['$scope','adminService',function($scope,adminS
 	var isDuplicate = false;
 	$scope.addProjector = function(){	
 		$scope.projectors.forEach(function (element) {
-			alert(JSON.stringify($scope.projector.name).toUpperCase());
 	         if (JSON.stringify(element.name).toUpperCase() === JSON.stringify($scope.projector.name).toUpperCase()) {       
 	        	 isDuplicate = true;
 	         }

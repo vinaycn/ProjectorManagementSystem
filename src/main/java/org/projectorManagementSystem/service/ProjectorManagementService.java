@@ -63,7 +63,7 @@ public class ProjectorManagementService implements IProjectorManagementService {
 			availableprojector = findTheAvailableProjector(reservedProjectorList, projectorList);
 			if (null == availableprojector) {
 				long getNextTime = getLatestAvailableProjector(reservedProjectorList);
-				return "Sorry! Projectors are not Available " + "the earliest Available is @ " + new Date(getNextTime);
+				return "Sorry! Projectors are not Available. The earliest Available is @" + getNextTime;
 			} else {
 				reserveProjector = new ReserveProjector(team, availableprojector, startTime, endTime);
 				projectorReservationRepo.saveAndFlush(reserveProjector);
