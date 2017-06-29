@@ -5,6 +5,8 @@ import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
+import java.text.DateFormat;
+import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -33,6 +35,9 @@ public class ProjectorManagementTests {
 	@Mock
 	private ProjectorReservationRepo projectorReservationRepo;
 
+	@Mock
+	private DateFormat dateFormat;
+	
 	@Mock
 	private TeamRepo teamRepo;
 	
@@ -75,7 +80,7 @@ public class ProjectorManagementTests {
 	}
 	
 	@Test
-	public void WhenProjectorIsRequestedThenBookTheProjector(){
+	public void WhenProjectorIsRequestedThenBookTheProjector() throws ParseException{
 		Team team = new Team("Some");	
 		Projector projector = new Projector();
 		projector.setName("PRO1");

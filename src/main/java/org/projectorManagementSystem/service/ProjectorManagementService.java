@@ -1,5 +1,7 @@
 package org.projectorManagementSystem.service;
 
+import java.text.DateFormat;
+import java.text.ParseException;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
@@ -15,6 +17,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import net.minidev.asm.ConvertDate;
+
 @Service
 public class ProjectorManagementService implements IProjectorManagementService {
 
@@ -23,6 +27,7 @@ public class ProjectorManagementService implements IProjectorManagementService {
 
 	@Autowired
 	private ProjectorReservationRepo projectorReservationRepo;
+
 
 	@Autowired
 	private TeamRepo teamRepo;
@@ -44,29 +49,29 @@ public class ProjectorManagementService implements IProjectorManagementService {
 
 	@Override
 	@Transactional
-	public String reserveProjector(int teamId, long startTime, long endTime) {
+	public String reserveProjector(int teamId, long startTime, long endTime)  {
 
 		List<ReserveProjector> reservedProjectorList = projectorReservationRepo.findByStartTimeAndEndTime(startTime,
 				endTime);
 		List<Projector> projectorList = this.getProjectors();
-		
+
 		Team team = teamRepo.findOne(teamId);
 		final ReserveProjector reserveProjector;
 		Projector availableprojector = null;
 		if (reservedProjectorList.size() == 0) {
 			availableprojector = projectorList.get(0);
-			reserveProjector = new ReserveProjector(team,availableprojector,startTime,endTime);
+			reserveProjector = new ReserveProjector(team, availableprojector, startTime, endTime);
 			projectorReservationRepo.saveAndFlush(reserveProjector);
-			return "Projector " + availableprojector.getName() + " Reserved Successfully fopr you!";
+			return "Projector " + availableprojector.getName() + " Reserved Successfully!";
 		} else {
 			availableprojector = findTheAvailableProjector(reservedProjectorList, projectorList);
 			if (null == availableprojector) {
 				long getNextTime = getLatestAvailableProjector(reservedProjectorList);
 				return "Sorry! Projectors are not Available " + "the earliest Available is @ " + new Date(getNextTime);
-			}else{
-				reserveProjector = new ReserveProjector(team,availableprojector,startTime,endTime);
+			} else {
+				reserveProjector = new ReserveProjector(team, availableprojector, startTime, endTime);
 				projectorReservationRepo.saveAndFlush(reserveProjector);
-				return "Projector " + availableprojector.getName() + " Reserved Successfully fopr you!";
+				return "Projector " + availableprojector.getName() + " Reserved Successfully!";
 			}
 		}
 
@@ -103,7 +108,7 @@ public class ProjectorManagementService implements IProjectorManagementService {
 			reservedProjectorSet.add(rprojector2.getProjector());
 		}
 		for (Projector projector : projectorList) {
-			
+
 			if (!reservedProjectorSet.contains(projector)) {
 				return projector;
 			}

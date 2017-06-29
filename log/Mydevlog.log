@@ -82,3 +82,137 @@
 2017-06-29 01:13:31 [main] INFO  o.s.t.w.s.TestDispatcherServlet - FrameworkServlet '': initialization completed in 10 ms
 2017-06-29 01:13:31 [main] INFO  o.p.controller.ProjectorController - -- User Requesting for a Projector --
 2017-06-29 01:13:31 [Thread-2] INFO  o.s.w.c.s.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@60db1c0e: startup date [Thu Jun 29 01:13:29 EDT 2017]; root of context hierarchy
+2017-06-29 15:56:46 [main] INFO  o.p.controller.TeamControllerTest - Starting TeamControllerTest on vinay-HP-Spectre-x360-Convertible with PID 10836 (started by vinay in /home/vinay/PortfolioWorkspace/ProjectorManagementSystem)
+2017-06-29 15:56:46 [main] INFO  o.p.controller.TeamControllerTest - The following profiles are active: dev
+2017-06-29 15:56:46 [main] INFO  o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@609bcfb6: startup date [Thu Jun 29 15:56:46 EDT 2017]; root of context hierarchy
+2017-06-29 15:56:48 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@609bcfb6: startup date [Thu Jun 29 15:56:46 EDT 2017]; root of context hierarchy
+2017-06-29 15:56:48 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/add-team],methods=[POST],produces=[application/json]}" onto public java.util.List<org.projectorManagementSystem.modal.Team> org.projectorManagementSystem.controller.TeamController.addTeam(java.lang.String)
+2017-06-29 15:56:48 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/get-teams]}" onto public java.util.List<org.projectorManagementSystem.modal.Team> org.projectorManagementSystem.controller.TeamController.getTeam()
+2017-06-29 15:56:48 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/delete-team],methods=[POST]}" onto public java.util.List<org.projectorManagementSystem.modal.Team> org.projectorManagementSystem.controller.TeamController.deleteTeam(java.lang.String)
+2017-06-29 15:56:48 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/getReserved-projectors],methods=[GET],produces=[application/json]}" onto public java.util.List<org.projectorManagementSystem.modal.ReserveProjector> org.projectorManagementSystem.controller.TeamController.getReservedProjectorsForTeam()
+2017-06-29 15:56:48 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-06-29 15:56:48 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-06-29 15:56:48 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-06-29 15:56:48 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-06-29 15:56:48 [main] INFO  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Detected @ExceptionHandler methods in exceptionController
+2017-06-29 15:56:48 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-06-29 15:56:48 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring FrameworkServlet ''
+2017-06-29 15:56:48 [main] INFO  o.s.t.w.s.TestDispatcherServlet - FrameworkServlet '': initialization started
+2017-06-29 15:56:48 [main] INFO  o.s.t.w.s.TestDispatcherServlet - FrameworkServlet '': initialization completed in 34 ms
+2017-06-29 15:56:48 [main] INFO  o.p.controller.TeamControllerTest - Started TeamControllerTest in 2.317 seconds (JVM running for 3.16)
+2017-06-29 15:56:48 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring FrameworkServlet ''
+2017-06-29 15:56:48 [main] INFO  o.s.t.w.s.TestDispatcherServlet - FrameworkServlet '': initialization started
+2017-06-29 15:56:48 [main] INFO  o.s.t.w.s.TestDispatcherServlet - FrameworkServlet '': initialization completed in 2 ms
+2017-06-29 15:56:48 [main] INFO  o.p.controller.TeamController - -- Adding Team --
+2017-06-29 15:56:48 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring FrameworkServlet ''
+2017-06-29 15:56:48 [main] INFO  o.s.t.w.s.TestDispatcherServlet - FrameworkServlet '': initialization started
+2017-06-29 15:56:48 [main] INFO  o.s.t.w.s.TestDispatcherServlet - FrameworkServlet '': initialization completed in 2 ms
+2017-06-29 15:56:48 [main] INFO  o.p.controller.TeamController - -- get Teams --
+2017-06-29 15:56:48 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring FrameworkServlet ''
+2017-06-29 15:56:48 [main] INFO  o.s.t.w.s.TestDispatcherServlet - FrameworkServlet '': initialization started
+2017-06-29 15:56:48 [main] INFO  o.s.t.w.s.TestDispatcherServlet - FrameworkServlet '': initialization completed in 2 ms
+2017-06-29 15:56:48 [main] INFO  o.p.controller.TeamController - -- Deleting Team --
+2017-06-29 15:56:48 [main] INFO  o.p.c.ProjectorControllerTests - Starting ProjectorControllerTests on vinay-HP-Spectre-x360-Convertible with PID 10836 (started by vinay in /home/vinay/PortfolioWorkspace/ProjectorManagementSystem)
+2017-06-29 15:56:48 [main] INFO  o.p.c.ProjectorControllerTests - The following profiles are active: dev
+2017-06-29 15:56:48 [main] INFO  o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@7f5eae0f: startup date [Thu Jun 29 15:56:48 EDT 2017]; root of context hierarchy
+2017-06-29 15:56:49 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@7f5eae0f: startup date [Thu Jun 29 15:56:48 EDT 2017]; root of context hierarchy
+2017-06-29 15:56:49 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/delete-projector]}" onto public java.util.List<org.projectorManagementSystem.modal.Projector> org.projectorManagementSystem.controller.ProjectorController.deleteProjector(java.lang.String)
+2017-06-29 15:56:49 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/add-projector],methods=[POST]}" onto public java.util.List<org.projectorManagementSystem.modal.Projector> org.projectorManagementSystem.controller.ProjectorController.addprojector(java.lang.String)
+2017-06-29 15:56:49 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/make-reservation],methods=[POST]}" onto public java.lang.String org.projectorManagementSystem.controller.ProjectorController.makeProjectorReservation(java.lang.String,java.lang.String,java.lang.String) throws java.lang.NumberFormatException,java.text.ParseException
+2017-06-29 15:56:49 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/get-projectors]}" onto public java.util.List<org.projectorManagementSystem.modal.Projector> org.projectorManagementSystem.controller.ProjectorController.getProjector()
+2017-06-29 15:56:49 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/delete-projectorRequest],methods=[POST]}" onto public java.util.List<org.projectorManagementSystem.modal.ReserveProjector> org.projectorManagementSystem.controller.ProjectorController.deleteProjectorRequest(java.lang.String)
+2017-06-29 15:56:49 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-06-29 15:56:49 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-06-29 15:56:49 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-06-29 15:56:49 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-06-29 15:56:49 [main] INFO  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Detected @ExceptionHandler methods in exceptionController
+2017-06-29 15:56:49 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-06-29 15:56:49 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring FrameworkServlet ''
+2017-06-29 15:56:49 [main] INFO  o.s.t.w.s.TestDispatcherServlet - FrameworkServlet '': initialization started
+2017-06-29 15:56:49 [main] INFO  o.s.t.w.s.TestDispatcherServlet - FrameworkServlet '': initialization completed in 8 ms
+2017-06-29 15:56:49 [main] INFO  o.p.c.ProjectorControllerTests - Started ProjectorControllerTests in 0.514 seconds (JVM running for 3.965)
+2017-06-29 15:56:49 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring FrameworkServlet ''
+2017-06-29 15:56:49 [main] INFO  o.s.t.w.s.TestDispatcherServlet - FrameworkServlet '': initialization started
+2017-06-29 15:56:49 [main] INFO  o.s.t.w.s.TestDispatcherServlet - FrameworkServlet '': initialization completed in 3 ms
+2017-06-29 15:56:49 [main] INFO  o.p.controller.ProjectorController - -- Getting Projectors --
+2017-06-29 15:56:49 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring FrameworkServlet ''
+2017-06-29 15:56:49 [main] INFO  o.s.t.w.s.TestDispatcherServlet - FrameworkServlet '': initialization started
+2017-06-29 15:56:49 [main] INFO  o.s.t.w.s.TestDispatcherServlet - FrameworkServlet '': initialization completed in 2 ms
+2017-06-29 15:56:49 [main] INFO  o.p.controller.ProjectorController - -- Deleting Projector --
+2017-06-29 15:56:49 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring FrameworkServlet ''
+2017-06-29 15:56:49 [main] INFO  o.s.t.w.s.TestDispatcherServlet - FrameworkServlet '': initialization started
+2017-06-29 15:56:49 [main] INFO  o.s.t.w.s.TestDispatcherServlet - FrameworkServlet '': initialization completed in 1 ms
+2017-06-29 15:56:49 [main] INFO  o.p.controller.ProjectorController - -- Adding Projector --
+2017-06-29 15:56:49 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring FrameworkServlet ''
+2017-06-29 15:56:49 [main] INFO  o.s.t.w.s.TestDispatcherServlet - FrameworkServlet '': initialization started
+2017-06-29 15:56:49 [main] INFO  o.s.t.w.s.TestDispatcherServlet - FrameworkServlet '': initialization completed in 1 ms
+2017-06-29 15:56:49 [main] INFO  o.p.controller.ProjectorController - -- User Requesting for a Projector --
+2017-06-29 15:56:49 [Thread-2] INFO  o.s.w.c.s.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@609bcfb6: startup date [Thu Jun 29 15:56:46 EDT 2017]; root of context hierarchy
+2017-06-29 15:56:49 [Thread-4] INFO  o.s.w.c.s.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@7f5eae0f: startup date [Thu Jun 29 15:56:48 EDT 2017]; root of context hierarchy
+2017-06-29 16:26:38 [main] INFO  o.p.controller.TeamControllerTest - Starting TeamControllerTest on vinay-HP-Spectre-x360-Convertible with PID 12905 (started by vinay in /home/vinay/PortfolioWorkspace/ProjectorManagementSystem)
+2017-06-29 16:26:38 [main] INFO  o.p.controller.TeamControllerTest - The following profiles are active: dev
+2017-06-29 16:26:38 [main] INFO  o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@609bcfb6: startup date [Thu Jun 29 16:26:38 EDT 2017]; root of context hierarchy
+2017-06-29 16:26:40 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@609bcfb6: startup date [Thu Jun 29 16:26:38 EDT 2017]; root of context hierarchy
+2017-06-29 16:26:40 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/add-team],methods=[POST],produces=[application/json]}" onto public java.util.List<org.projectorManagementSystem.modal.Team> org.projectorManagementSystem.controller.TeamController.addTeam(java.lang.String)
+2017-06-29 16:26:40 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/get-teams]}" onto public java.util.List<org.projectorManagementSystem.modal.Team> org.projectorManagementSystem.controller.TeamController.getTeam()
+2017-06-29 16:26:40 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/delete-team],methods=[POST]}" onto public java.util.List<org.projectorManagementSystem.modal.Team> org.projectorManagementSystem.controller.TeamController.deleteTeam(java.lang.String)
+2017-06-29 16:26:40 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/getReserved-projectors],methods=[GET],produces=[application/json]}" onto public java.util.List<org.projectorManagementSystem.modal.ReserveProjector> org.projectorManagementSystem.controller.TeamController.getReservedProjectorsForTeam()
+2017-06-29 16:26:40 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-06-29 16:26:40 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-06-29 16:26:40 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-06-29 16:26:40 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-06-29 16:26:40 [main] INFO  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Detected @ExceptionHandler methods in exceptionController
+2017-06-29 16:26:40 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-06-29 16:26:40 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring FrameworkServlet ''
+2017-06-29 16:26:40 [main] INFO  o.s.t.w.s.TestDispatcherServlet - FrameworkServlet '': initialization started
+2017-06-29 16:26:40 [main] INFO  o.s.t.w.s.TestDispatcherServlet - FrameworkServlet '': initialization completed in 23 ms
+2017-06-29 16:26:40 [main] INFO  o.p.controller.TeamControllerTest - Started TeamControllerTest in 2.607 seconds (JVM running for 3.423)
+2017-06-29 16:26:40 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring FrameworkServlet ''
+2017-06-29 16:26:40 [main] INFO  o.s.t.w.s.TestDispatcherServlet - FrameworkServlet '': initialization started
+2017-06-29 16:26:40 [main] INFO  o.s.t.w.s.TestDispatcherServlet - FrameworkServlet '': initialization completed in 5 ms
+2017-06-29 16:26:40 [main] INFO  o.p.controller.TeamController - -- Adding Team --
+2017-06-29 16:26:41 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring FrameworkServlet ''
+2017-06-29 16:26:41 [main] INFO  o.s.t.w.s.TestDispatcherServlet - FrameworkServlet '': initialization started
+2017-06-29 16:26:41 [main] INFO  o.s.t.w.s.TestDispatcherServlet - FrameworkServlet '': initialization completed in 2 ms
+2017-06-29 16:26:41 [main] INFO  o.p.controller.TeamController - -- get Teams --
+2017-06-29 16:26:41 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring FrameworkServlet ''
+2017-06-29 16:26:41 [main] INFO  o.s.t.w.s.TestDispatcherServlet - FrameworkServlet '': initialization started
+2017-06-29 16:26:41 [main] INFO  o.s.t.w.s.TestDispatcherServlet - FrameworkServlet '': initialization completed in 2 ms
+2017-06-29 16:26:41 [main] INFO  o.p.controller.TeamController - -- Deleting Team --
+2017-06-29 16:26:41 [main] INFO  o.p.c.ProjectorControllerTests - Starting ProjectorControllerTests on vinay-HP-Spectre-x360-Convertible with PID 12905 (started by vinay in /home/vinay/PortfolioWorkspace/ProjectorManagementSystem)
+2017-06-29 16:26:41 [main] INFO  o.p.c.ProjectorControllerTests - The following profiles are active: dev
+2017-06-29 16:26:41 [main] INFO  o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@52cb4f50: startup date [Thu Jun 29 16:26:41 EDT 2017]; root of context hierarchy
+2017-06-29 16:26:41 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@52cb4f50: startup date [Thu Jun 29 16:26:41 EDT 2017]; root of context hierarchy
+2017-06-29 16:26:41 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/delete-projector]}" onto public java.util.List<org.projectorManagementSystem.modal.Projector> org.projectorManagementSystem.controller.ProjectorController.deleteProjector(java.lang.String)
+2017-06-29 16:26:41 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/make-reservation],methods=[POST]}" onto public java.lang.String org.projectorManagementSystem.controller.ProjectorController.makeProjectorReservation(java.lang.String,java.lang.String,java.lang.String) throws java.lang.NumberFormatException,java.text.ParseException
+2017-06-29 16:26:41 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/add-projector],methods=[POST]}" onto public java.util.List<org.projectorManagementSystem.modal.Projector> org.projectorManagementSystem.controller.ProjectorController.addprojector(java.lang.String)
+2017-06-29 16:26:41 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/get-projectors]}" onto public java.util.List<org.projectorManagementSystem.modal.Projector> org.projectorManagementSystem.controller.ProjectorController.getProjector()
+2017-06-29 16:26:41 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/delete-projectorRequest],methods=[POST]}" onto public java.util.List<org.projectorManagementSystem.modal.ReserveProjector> org.projectorManagementSystem.controller.ProjectorController.deleteProjectorRequest(java.lang.String)
+2017-06-29 16:26:41 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-06-29 16:26:41 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-06-29 16:26:41 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-06-29 16:26:41 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-06-29 16:26:41 [main] INFO  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Detected @ExceptionHandler methods in exceptionController
+2017-06-29 16:26:41 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-06-29 16:26:41 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring FrameworkServlet ''
+2017-06-29 16:26:41 [main] INFO  o.s.t.w.s.TestDispatcherServlet - FrameworkServlet '': initialization started
+2017-06-29 16:26:41 [main] INFO  o.s.t.w.s.TestDispatcherServlet - FrameworkServlet '': initialization completed in 8 ms
+2017-06-29 16:26:41 [main] INFO  o.p.c.ProjectorControllerTests - Started ProjectorControllerTests in 0.786 seconds (JVM running for 4.486)
+2017-06-29 16:26:41 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring FrameworkServlet ''
+2017-06-29 16:26:41 [main] INFO  o.s.t.w.s.TestDispatcherServlet - FrameworkServlet '': initialization started
+2017-06-29 16:26:41 [main] INFO  o.s.t.w.s.TestDispatcherServlet - FrameworkServlet '': initialization completed in 2 ms
+2017-06-29 16:26:41 [main] INFO  o.p.controller.ProjectorController - -- Getting Projectors --
+2017-06-29 16:26:41 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring FrameworkServlet ''
+2017-06-29 16:26:41 [main] INFO  o.s.t.w.s.TestDispatcherServlet - FrameworkServlet '': initialization started
+2017-06-29 16:26:41 [main] INFO  o.s.t.w.s.TestDispatcherServlet - FrameworkServlet '': initialization completed in 2 ms
+2017-06-29 16:26:41 [main] INFO  o.p.controller.ProjectorController - -- Deleting Projector --
+2017-06-29 16:26:41 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring FrameworkServlet ''
+2017-06-29 16:26:41 [main] INFO  o.s.t.w.s.TestDispatcherServlet - FrameworkServlet '': initialization started
+2017-06-29 16:26:41 [main] INFO  o.s.t.w.s.TestDispatcherServlet - FrameworkServlet '': initialization completed in 3 ms
+2017-06-29 16:26:41 [main] INFO  o.p.controller.ProjectorController - -- Adding Projector --
+2017-06-29 16:26:41 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring FrameworkServlet ''
+2017-06-29 16:26:41 [main] INFO  o.s.t.w.s.TestDispatcherServlet - FrameworkServlet '': initialization started
+2017-06-29 16:26:41 [main] INFO  o.s.t.w.s.TestDispatcherServlet - FrameworkServlet '': initialization completed in 1 ms
+2017-06-29 16:26:41 [main] INFO  o.p.controller.ProjectorController - -- User Requesting for a Projector --
+2017-06-29 16:26:41 [Thread-4] INFO  o.s.w.c.s.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@52cb4f50: startup date [Thu Jun 29 16:26:41 EDT 2017]; root of context hierarchy
+2017-06-29 16:26:41 [Thread-2] INFO  o.s.w.c.s.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@609bcfb6: startup date [Thu Jun 29 16:26:38 EDT 2017]; root of context hierarchy

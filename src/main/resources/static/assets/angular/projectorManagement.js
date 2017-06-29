@@ -33,9 +33,9 @@ var app = angular.module('projectorManagement',[])
 		});
 	};
 	
-	$scope.getProjectorReservations =function(id){
+	$scope.getProjectorReservations =function(){
 	
-		pmService.getReservedProjectors(id,function(data){
+		pmService.getReservedProjectors(function(data){
 			$scope.teamReservatios = data;
 		});
 	}
@@ -67,13 +67,12 @@ app.service('pmService',function($http){
 	};
 	
 	
-	this.getReservedProjectors = function(id,callBack) {
+	this.getReservedProjectors = function(callBack) {
 		$http.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded; charset=UTF-8';
-		var data = 'id='+id;
+		
 		$http({
 			url : 'getReserved-projectors',
-			method : 'POST',
-			data: data
+			method : 'GET',
 		}).then(function(response) {
 			console.log(response.data);
 			callBack(response.data);

@@ -1,6 +1,5 @@
 package org.projectorManagementSystem.service;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.projectorManagementSystem.modal.ReserveProjector;
@@ -44,7 +43,7 @@ public class TeamService implements ITeamService {
 
 	@Override
 	@Transactional
-	public List<ReserveProjector> getReservedForProjectors(String id) {
+	public List<ReserveProjector> getReservedForProjectors() {
 
 		return projectorReservationRepo.findAll();
 

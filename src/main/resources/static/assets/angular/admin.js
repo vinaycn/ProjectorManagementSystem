@@ -58,6 +58,7 @@ app.controller('adminController',['$scope','adminService',function($scope,adminS
 		
 		adminService.addTeam($scope.team.name,function(data){
 			$scope.teams = data;
+			$scope.team.name="";
 		});
 	};
 	
@@ -71,6 +72,7 @@ app.controller('adminController',['$scope','adminService',function($scope,adminS
 	$scope.addProjector = function(){
 		adminService.addProjector($scope.projector.name,function(data){
 			$scope.projectors = data;
+			$scope.projector.name="";
 		});
 	};
 	

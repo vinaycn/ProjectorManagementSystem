@@ -18,7 +18,7 @@
 </script>
 <title>Projector Request Page</title>
 </head>
-<body  id="pmController" ng-controller="projectorManagementController" ng-init="load()">
+<body  >
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
@@ -29,7 +29,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="container">
+	<div class="container" id="pmController" ng-controller="projectorManagementController" ng-init="load()">
 		<br/>
 		<div class="row">
 			<div class="col-md-3"></div>
@@ -39,7 +39,7 @@
 					<div class="form-group">
 						<label for="datetimepicker6">Start Time:</label>
 						<div class='datepicker-input input-group date' id="datetimepicker6">
-							<input type='text' class="form-control" id="from" required="required"/> <span
+							<input type='text' class="form-control" id="fromDate" required="required"/> <span
 								class="input-group-addon"> <span
 								class="glyphicon glyphicon-calendar"></span>
 							</span>
@@ -65,7 +65,7 @@
 					
 					<div class="form-group">
 						<div class="col-xs-5 col-xs-offset-3">
-							<button type="submit" class="btn btn-default">Book Projector</button>
+							<button type="submit" id="reserve" class="btn btn-default">Book Projector</button>
 						</div>
 					</div>
 				</form>
@@ -92,10 +92,10 @@
 					<tbody>
 						<tr ng-repeat="reservation in teamReservatios">
 							<td>{{$index + 1}}</td>
-							<td>{{reservation.team.name}}</td>
-							<td>{{reservation.projector.name}}</td>
-							<td>{{reservation.startTime | date: 'MM-dd-yyyy HH:mm a'}}</td>
-							<td>{{reservation.endTime | date: 'MM-dd-yyyy HH:mm a'}}</td>
+							<td style="color: blue;">{{reservation.team.name}}</td>
+							<td style="color: green;">{{reservation.projector.name}}</td>
+							<td>{{reservation.startTime | date: 'MM-dd-yyyy HH:mm' : -0700}}</td>
+							<td>{{reservation.endTime | date: 'MM-dd-yyyy HH:mm' : -0700 }}</td>
 							<td><p data-placement="top" data-toggle="tooltip"
 									title="Delete">
 									<button class="btn btn-danger btn-xs" data-title="Delete"
@@ -124,17 +124,34 @@
 			$('#datetimepicker6').datetimepicker({
 				minDate : new Date(),
 				format: 'MM/DD/YYYY HH:mm'		
-			}).on()
+			});
+			
+			var minDate = Date.parse($("#fromDate").val());
+            var maxDate = Date.parse($("#to").val());
+            
+            /* if(isNaN(maxDate)){
+            	$("#reserve").prop("disabled",true);
+            } */
+            
+            
+            
 			$('#datetimepicker7').datetimepicker({
 				useCurrent : false,
 				format: 'MM/DD/YYYY HH:mm'
 			//Important! See issue #1075
 			});
-			
 			$("#datetimepicker6").on("dp.change", function(e) {
 				$('#datetimepicker7').data("DateTimePicker").minDate(e.date);
 			});
 			$("#datetimepicker7").on("dp.change", function(e) {
+				var maxDate = Date.parse($("#to").val());
+				var minDate = Date.parse($("#fromDate").val());
+	            
+				if(maxDate<=minDate){
+					$("#reserve").prop("disabled",true);
+				}else{
+					$("#reserve").prop("disabled",false);
+				}
 				$('#datetimepicker6').data("DateTimePicker").maxDate(e.date);
 			});
 		});

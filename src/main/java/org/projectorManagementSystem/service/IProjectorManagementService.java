@@ -11,7 +11,7 @@ public interface IProjectorManagementService {
 	
 	List<Projector> getProjectors();
 	
-	String reserveProjector(int teamId,long startTime,long endTime);
+	String reserveProjector(int teamId,long startTime,long endTime) throws Exception;
 	
 	List<ReserveProjector> deleteTheRequestForProjector(int id);
 	

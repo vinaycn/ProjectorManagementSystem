@@ -45,10 +45,10 @@ public class TeamController {
 	}
 	
 	
-	@RequestMapping(value="/getReserved-projectors",method=RequestMethod.POST,produces = "application/json")
-	public List<ReserveProjector> getReservedProjectorsForTeam(@RequestParam("id") String id){
+	@RequestMapping(value="/getReserved-projectors",method=RequestMethod.GET,produces = "application/json")
+	public List<ReserveProjector> getReservedProjectorsForTeam(){
 		logger.info("-- Get Reserved Projectors --");
-		return  teamService.getReservedForProjectors(id);
+		return  teamService.getReservedForProjectors();
 	}
 	
 	

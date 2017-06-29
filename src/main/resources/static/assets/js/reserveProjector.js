@@ -15,7 +15,7 @@ $(function() {
             var url = window.location.pathname.split('/');
             var lastParam = url.length;
             //alert(url[lastParam-1]);
-            var from = $("input#from").val();
+            var from = $("input#fromDate").val();
             var to= $("input#to").val();
             var team = $("select#team").val();
             //alert(from + to + team);
@@ -30,8 +30,7 @@ $(function() {
                 cache: false,
                 success: function(status) {
                 	//alert(status);
-                	//angular.element('#pmController').scope().getProjectorReservations();
-                	//angular.element('#pmController').scope().$apply();
+                	
                     $('#success').html("<div class='alert alert-success'>");
                     $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
                         .append("</button>");
@@ -42,6 +41,8 @@ $(function() {
 
                     //clear all fields
                     $('#projectRequestForm').trigger("reset");
+                    angular.element($("#pmController")).scope().getProjectorReservations();
+                    angular.element($("#pmController")).scope().$apply();
                 },
                 error: function(data) {
                     

@@ -14,5 +14,5 @@ public interface ITeamService {
 	
 	List<Team> deleteTeam(int id);
 	
-	List<ReserveProjector> getReservedForProjectors(String id);
+	List<ReserveProjector> getReservedForProjectors();
 }
