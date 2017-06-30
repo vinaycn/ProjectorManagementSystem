@@ -35,8 +35,7 @@ public class ProjectorManagementTests {
 	@Mock
 	private ProjectorReservationRepo projectorReservationRepo;
 
-	@Mock
-	private DateFormat dateFormat;
+	
 	
 	@Mock
 	private TeamRepo teamRepo;
@@ -103,7 +102,7 @@ public class ProjectorManagementTests {
 		
 		when(projectorReservationRepo.findByStartTimeAndEndTime(11111,22222)).thenReturn(reserveProjectorsList);
 		when(projectorManagementRepo.findAll()).thenReturn(projectorList);
-		
+		when(teamRepo.findOne(1)).thenReturn(team);
 		String some = projectorManagementService.reserveProjector(1, 11123,12354);
 		assertThat(some).isNotEmpty();
 		

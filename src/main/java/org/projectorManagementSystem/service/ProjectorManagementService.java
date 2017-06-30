@@ -33,6 +33,10 @@ public class ProjectorManagementService implements IProjectorManagementService {
 	@Autowired
 	private TeamRepo teamRepo;
 
+	/**
+	 * @param will take projector name
+	 * @return will return list of the projector
+	 */
 	@Override
 	@Transactional
 	public List<Projector> addProjector(String name) {
@@ -43,6 +47,9 @@ public class ProjectorManagementService implements IProjectorManagementService {
 		return projectorManagementRepo.findAll();
 	}
 
+	/**
+	 * @return Will return  list of the projectors
+	 */
 	@Override
 	@Transactional
 	public List<Projector> getProjectors() {
@@ -50,10 +57,16 @@ public class ProjectorManagementService implements IProjectorManagementService {
 		return projectorManagementRepo.findAll();
 	}
 
+	/**
+	 * @param will take the teamId
+	 * @param starttime requested from the user
+	 * @param endtime requested from the user
+	 * @return the approriate messages 
+	 */
 	@Override
 	@Transactional
 	public String reserveProjector(int teamId, long startTime, long endTime)  {
-
+		
 		
 		List<ReserveProjector> reservedProjectorList = projectorReservationRepo.findByStartTimeAndEndTime(startTime,
 				endTime);
@@ -82,6 +95,10 @@ public class ProjectorManagementService implements IProjectorManagementService {
 
 	}
 
+	/**
+	 * @param will take the list of the reservedProjectorLists
+	 * @return will return next available projector in the systems
+	 */
 	@Override
 	public long getLatestAvailableProjector(List<ReserveProjector> reservedProjectorList) {
 
@@ -91,6 +108,10 @@ public class ProjectorManagementService implements IProjectorManagementService {
 
 	}
 
+	/**
+	 * @param will take the id of the projector to delete
+	 * @return will return the list of the projectors
+	 */
 	@Override
 	@Transactional
 	public List<Projector> deleteProjector(int id) {
@@ -99,6 +120,10 @@ public class ProjectorManagementService implements IProjectorManagementService {
 		return projectorManagementRepo.findAll();
 	}
 
+	/**
+	 * @param will take the id to delete the projector request
+	 * @return list of the reserve projector
+	 */
 	@Override
 	@Transactional
 	public List<ReserveProjector> deleteTheRequestForProjector(int id) {
@@ -107,6 +132,11 @@ public class ProjectorManagementService implements IProjectorManagementService {
 		return projectorReservationRepo.findAll();
 	}
 
+	/**
+	 * @param reservedProjector list
+	 * @param projector list
+	 * @return return the available project which can be reserved
+	 */
 	@Override
 	public Projector findTheAvailableProjector(final List<ReserveProjector> reserveProjectorList,
 			final List<Projector> projectorList) {
