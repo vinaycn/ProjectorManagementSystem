@@ -1,6 +1,5 @@
 package org.projectorManagementSystem.service;
 
-import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -11,6 +10,8 @@ import org.projectorManagementSystem.modal.Team;
 import org.projectorManagementSystem.repository.ProjectorManagementRepo;
 import org.projectorManagementSystem.repository.ProjectorReservationRepo;
 import org.projectorManagementSystem.repository.TeamRepo;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -18,6 +19,10 @@ import org.springframework.transaction.annotation.Transactional;
 @Service
 public class ProjectorManagementService implements IProjectorManagementService {
 
+	
+	
+	private static final Logger logger = LoggerFactory.getLogger(ProjectorManagementService.class);
+	
 	@Autowired
 	private ProjectorManagementRepo projectorManagementRepo;
 
@@ -31,6 +36,7 @@ public class ProjectorManagementService implements IProjectorManagementService {
 	@Override
 	@Transactional
 	public List<Projector> addProjector(String name) {
+		logger.info("Adding projector with the name " +name);
 		final Projector projector = new Projector();
 		projector.setName(name);
 		projectorManagementRepo.saveAndFlush(projector);
@@ -40,6 +46,7 @@ public class ProjectorManagementService implements IProjectorManagementService {
 	@Override
 	@Transactional
 	public List<Projector> getProjectors() {
+		logger.info("Getting all the projectors from the database ");
 		return projectorManagementRepo.findAll();
 	}
 
@@ -47,11 +54,13 @@ public class ProjectorManagementService implements IProjectorManagementService {
 	@Transactional
 	public String reserveProjector(int teamId, long startTime, long endTime)  {
 
+		
 		List<ReserveProjector> reservedProjectorList = projectorReservationRepo.findByStartTimeAndEndTime(startTime,
 				endTime);
 		List<Projector> projectorList = this.getProjectors();
 
 		Team team = teamRepo.findOne(teamId);
+		logger.info("Reserving the projector for the team with the " +team.getName());
 		final ReserveProjector reserveProjector;
 		Projector availableprojector = null;
 		if (reservedProjectorList.size() == 0) {
@@ -85,6 +94,7 @@ public class ProjectorManagementService implements IProjectorManagementService {
 	@Override
 	@Transactional
 	public List<Projector> deleteProjector(int id) {
+		logger.info("Deleting the Projector with id " +id);
 		projectorManagementRepo.delete(id);
 		return projectorManagementRepo.findAll();
 	}
@@ -92,6 +102,7 @@ public class ProjectorManagementService implements IProjectorManagementService {
 	@Override
 	@Transactional
 	public List<ReserveProjector> deleteTheRequestForProjector(int id) {
+		logger.info("Deleting the ReserveProjector with id " +id);
 		projectorReservationRepo.delete(id);
 		return projectorReservationRepo.findAll();
 	}
@@ -99,6 +110,7 @@ public class ProjectorManagementService implements IProjectorManagementService {
 	@Override
 	public Projector findTheAvailableProjector(final List<ReserveProjector> reserveProjectorList,
 			final List<Projector> projectorList) {
+		logger.info("Find the latest available projector for the given list ");
 		final Set<Projector> reservedProjectorSet = new HashSet<>();
 		for (ReserveProjector rprojector2 : reserveProjectorList) {
 			reservedProjectorSet.add(rprojector2.getProjector());

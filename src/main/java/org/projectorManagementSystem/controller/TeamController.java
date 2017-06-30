@@ -24,28 +24,28 @@ public class TeamController {
 	
 	@RequestMapping(value="/add-team",method=RequestMethod.POST,produces = "application/json")
 	public List<Team> addTeam(@RequestParam("name") String name){
-		logger.info("-- Adding Team --");
+		logger.info(" Adding Team with the name " +name);
 		return teamService.addTeam(name);
 	}
 	
 	
 	@RequestMapping(value="/delete-team",method=RequestMethod.POST)
 	public List<Team> deleteTeam(@RequestParam("id") String id){
-		logger.info("-- Deleting Team --");
+		logger.info("-- Deleting Team with the id " + id);
 		return teamService.deleteTeam(Integer.valueOf(id));
 	}
 	
 	
 	@RequestMapping(value="/get-teams")
 	public List<Team> getTeam(){
-		logger.info("-- get Teams --");
+		logger.info("-- get all the Teams --");
 		return  teamService.getTeam();
 	}
 	
 	
 	@RequestMapping(value="/getReserved-projectors",method=RequestMethod.GET,produces = "application/json")
 	public List<ReserveProjector> getReservedProjectorsForTeam(){
-		logger.info("-- Get Reserved Projectors --");
+		logger.info("-- Get all the Reserved Projectors --");
 		return  teamService.getReservedForProjectors();
 	}
 	
