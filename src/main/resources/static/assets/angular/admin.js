@@ -27,19 +27,6 @@ app.controller('adminController',['$scope','adminService',function($scope,adminS
 	 $scope.isTNameDuplicate= false;
 	 $scope.isPNameDuplicate = false;
 	 
-	 
-	 
-	$scope.checkTeamName = function(){	
-		 
-		 if(!isDuplicate){
-			 $scope.isTNameDuplicate=false;
-		 }
-	}
-	
-	
-	
-	
-	
 	$scope.addTeam = function(){
 		var isTeamDuplicate = false;
 		$scope.teams.forEach(function (element) {
