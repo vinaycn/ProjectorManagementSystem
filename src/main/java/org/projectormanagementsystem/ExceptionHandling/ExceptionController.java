@@ -1,4 +1,4 @@
-package org.projectorManagementSystem.ExceptionHandling;
+package org.projectormanagementsystem.ExceptionHandling;
 
 import javax.servlet.http.HttpServletRequest;
 

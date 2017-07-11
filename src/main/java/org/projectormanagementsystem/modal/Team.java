@@ -1,4 +1,4 @@
-package org.projectorManagementSystem.modal;
+package org.projectormanagementsystem.modal;
 
 import java.io.Serializable;
 import java.util.List;

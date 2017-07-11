@@ -1,8 +1,8 @@
-package org.projectorManagementSystem.repository;
+package org.projectormanagementsystem.repository;
 
 import java.util.List;
 
-import org.projectorManagementSystem.modal.ReserveProjector;
+import org.projectormanagementsystem.modal.ReserveProjector;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

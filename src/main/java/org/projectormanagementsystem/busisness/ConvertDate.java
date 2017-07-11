@@ -1,4 +1,4 @@
-package org.projectorManagementSystem.busisness;
+package org.projectormanagementsystem.busisness;
 
 import java.text.DateFormat;
 import java.text.ParseException;

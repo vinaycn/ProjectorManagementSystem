@@ -1,9 +1,9 @@
-package org.projectorManagementSystem.service;
+package org.projectormanagementsystem.service;
 
 import java.util.List;
 
-import org.projectorManagementSystem.modal.ReserveProjector;
-import org.projectorManagementSystem.modal.Team;
+import org.projectormanagementsystem.modal.ReserveProjector;
+import org.projectormanagementsystem.modal.Team;
 
 public interface ITeamService {
 

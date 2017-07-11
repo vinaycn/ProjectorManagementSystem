@@ -1,10 +1,10 @@
-package org.projectorManagementSystem.controller;
+package org.projectormanagementsystem.controller;
 
 import java.util.List;
 
-import org.projectorManagementSystem.modal.ReserveProjector;
-import org.projectorManagementSystem.modal.Team;
-import org.projectorManagementSystem.service.TeamService;
+import org.projectormanagementsystem.modal.ReserveProjector;
+import org.projectormanagementsystem.modal.Team;
+import org.projectormanagementsystem.service.TeamService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

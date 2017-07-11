@@ -14,10 +14,10 @@ import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import org.projectorManagementSystem.modal.Team;
-import org.projectorManagementSystem.repository.ProjectorReservationRepo;
-import org.projectorManagementSystem.repository.TeamRepo;
-import org.projectorManagementSystem.service.TeamService;
+import org.projectormanagementsystem.modal.Team;
+import org.projectormanagementsystem.repository.ProjectorReservationRepo;
+import org.projectormanagementsystem.repository.TeamRepo;
+import org.projectormanagementsystem.service.TeamService;
 import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)

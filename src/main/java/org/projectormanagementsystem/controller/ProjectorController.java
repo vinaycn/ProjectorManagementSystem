@@ -1,12 +1,12 @@
-package org.projectorManagementSystem.controller;
+package org.projectormanagementsystem.controller;
 
 import java.text.ParseException;
 import java.util.List;
 
-import org.projectorManagementSystem.busisness.ConvertDate;
-import org.projectorManagementSystem.modal.Projector;
-import org.projectorManagementSystem.modal.ReserveProjector;
-import org.projectorManagementSystem.service.ProjectorManagementService;
+import org.projectormanagementsystem.busisness.ConvertDate;
+import org.projectormanagementsystem.modal.Projector;
+import org.projectormanagementsystem.modal.ReserveProjector;
+import org.projectormanagementsystem.service.ProjectorManagementService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
