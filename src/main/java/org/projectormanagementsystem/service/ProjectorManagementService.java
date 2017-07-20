@@ -16,6 +16,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+
+
+
 @Service
 public class ProjectorManagementService implements IProjectorManagementService {
 
@@ -69,7 +72,7 @@ public class ProjectorManagementService implements IProjectorManagementService {
 	 * @param teamId
 	 *          will take the teamId
 	 * @param startTime
-	 *          starttime requested from the user to book the projector
+	 *          startTime requested from the user to book the projector
 	 *          
 	 * @param endTime
 	 *          endtime requested from the user to book the projector

@@ -12,13 +12,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-@Service
+
 /****
  * This class have all the service level implementation for the team like
  * Add team, Delete Team, and Get all the Teams.
  * @author vinay
- *
  */
+
+@Service
 public class TeamService implements ITeamService {
 
 	
@@ -31,6 +32,8 @@ public class TeamService implements ITeamService {
 	private ProjectorReservationRepo projectorReservationRepo;
 
 	/**
+	 * return the list of teams in the system
+	 * 
 	 * @return List of teams
 	 */
 	@Override
@@ -41,8 +44,11 @@ public class TeamService implements ITeamService {
 	}
 
 	/**
-	 * @param Will take the team name as parameter
-	 * @return will return the list of teams
+	 * add the team for the given name
+	 * 
+	 * @param name
+	 *           name of the team to be added
+	 * @return will return list of teams
 	 */
 	@Override
 	@Transactional
@@ -55,8 +61,13 @@ public class TeamService implements ITeamService {
 	}
 
 	/**
-	 * @param Will take team id as the parameter
-	 * @return will return list of the teams
+	 * 
+	 * delete the team of the given id
+	 * 
+	 * @param id
+	 *          team id to delete
+	 *          
+	 * @return will return list of the teams after deletion
 	 */
 	@Override
 	@Transactional
@@ -67,6 +78,9 @@ public class TeamService implements ITeamService {
 	}
 
 	/**
+	 * 
+	 * return list of the reserved projectors
+	 * 
 	 * @return list of the reserved projectors
 	 */
 	@Override
