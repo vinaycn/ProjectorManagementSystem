@@ -47,7 +47,7 @@ public class TeamServiceTests {
 	
 
 	@Test
-	public void WhenGetTeamIsAsked_ThenTeamListIsReturned() {
+	public void WhenGetTeamIsAskedListofTeamsShouldBeReturned() {
 		List<Team> teamList = new ArrayList<>();
 		Team team1 = new Team();
 		Team team2 = new Team();
@@ -63,7 +63,7 @@ public class TeamServiceTests {
 	}
 
 	@Test
-	public void GivenTeamIDToDelete_ThenTeamIsDeleted(){
+	public void GivenTeamIDToDeleteTeamShoulbBeDeleted(){
 		
 		Team deleteTeam = new Team();
 		deleteTeam.setName("wqsdw");

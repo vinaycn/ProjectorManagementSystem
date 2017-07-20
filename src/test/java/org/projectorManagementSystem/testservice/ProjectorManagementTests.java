@@ -50,7 +50,7 @@ public class ProjectorManagementTests {
 	
 	
 	@Test
-	public void GivenGetProjectorsIsCalledThenReturnProjectorList(){
+	public void WhenGetProjectorsListofProjectorsShouldBeReturned(){
 		List<Projector> proList = new ArrayList<>();
 		Projector p = new Projector();
 		Projector p1 = new Projector();
