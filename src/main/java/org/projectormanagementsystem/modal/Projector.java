@@ -52,13 +52,25 @@ public class Projector implements Serializable {
 
 	@Override
 	public boolean equals(Object obj) {
-		Projector projector = (Projector) obj;
-		return projector.id == this.id;
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Projector other = (Projector) obj;
+		if (id != other.id)
+			return false;
+		return true;
 	}
 
+	
 	@Override
 	public int hashCode() {
-		return this.id;
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + id;
+		return result;
 	}
 
 	public Projector(String name) {
