@@ -16,13 +16,13 @@ import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import org.projectorManagementSystem.modal.Projector;
-import org.projectorManagementSystem.modal.ReserveProjector;
-import org.projectorManagementSystem.modal.Team;
-import org.projectorManagementSystem.repository.ProjectorManagementRepo;
-import org.projectorManagementSystem.repository.ProjectorReservationRepo;
-import org.projectorManagementSystem.repository.TeamRepo;
-import org.projectorManagementSystem.service.ProjectorManagementService;
+import org.projectormanagementsystem.modal.Projector;
+import org.projectormanagementsystem.modal.ReserveProjector;
+import org.projectormanagementsystem.modal.Team;
+import org.projectormanagementsystem.repository.ProjectorManagementRepo;
+import org.projectormanagementsystem.repository.ProjectorReservationRepo;
+import org.projectormanagementsystem.repository.TeamRepo;
+import org.projectormanagementsystem.service.ProjectorManagementService;
 import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)

@@ -1,15 +1,15 @@
-package org.projectorManagementSystem.service;
+package org.projectormanagementsystem.service;
 
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import org.projectorManagementSystem.modal.Projector;
-import org.projectorManagementSystem.modal.ReserveProjector;
-import org.projectorManagementSystem.modal.Team;
-import org.projectorManagementSystem.repository.ProjectorManagementRepo;
-import org.projectorManagementSystem.repository.ProjectorReservationRepo;
-import org.projectorManagementSystem.repository.TeamRepo;
+import org.projectormanagementsystem.modal.Projector;
+import org.projectormanagementsystem.modal.ReserveProjector;
+import org.projectormanagementsystem.modal.Team;
+import org.projectormanagementsystem.repository.ProjectorManagementRepo;
+import org.projectormanagementsystem.repository.ProjectorReservationRepo;
+import org.projectormanagementsystem.repository.TeamRepo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

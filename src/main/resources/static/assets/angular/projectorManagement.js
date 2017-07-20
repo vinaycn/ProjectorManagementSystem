@@ -41,7 +41,7 @@ var app = angular.module('projectorManagement',[])
 	}
 	
 	$scope.deleteProjectorRequest = function(id){
-		alert(id);
+		
 		pmService.deleteProjectorRequest(id,function(data){
 			$scope.teamReservatios = data;
 		});

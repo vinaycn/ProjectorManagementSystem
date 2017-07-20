@@ -41,11 +41,14 @@
 					<p style="color: Red"
 						ng-show="teamForm.team.$dirty&&teamForm.team.$error.pattern">
 						Please Enter an Valid Name!</p>
+						<p style="color: Red"
+						ng-show="teamForm.team.$dirty&&teamForm.team.$error.maxlength">
+						Name should not be more than 6 characters!</p>
 					<div class="form-group">
 						<label for="exampleInputName2">Name of the Team</label> <input
 							type="text" class="form-control" name="team" ng-model="team.name"
-							ng-change="checkTeamName()" id="exampleInputName2"
-							placeholder="Enter Team Name.." required="required"
+							 id="exampleInputName2"
+							placeholder="Enter Team Name.." ng-maxlength="6" required="required"
 							ng-pattern="/^[a-z0-9]+$/i">
 					</div>
 
@@ -87,12 +90,15 @@
 					<p style="color: Red"
 						ng-show="projectorForm.projector.$dirty&&projectorForm.projector.$error.pattern">
 						Please Enter an Valid Name!</p>
+						<p style="color: Red"
+						ng-show="projectorForm.projector.$dirty&&projectorForm.projector.$error.maxlength">
+						Name should not be more than 6 characters!</p>
 					<div class="form-group">
 						<label for="exampleInputName2">Name of the Projector</label> <input
 							type="text" name="projector" class="form-control"
-							ng-model="projector.name" ng-change="projectorNameValidation()"
+							ng-model="projector.name" 
 							ng-pattern="/^[a-z0-9]+$/i" id="exampleInputName2"
-							required="required" placeholder="Enter Projector Name..">
+							required="required" ng-maxlength="6" placeholder="Enter Projector Name..">
 
 					</div>
 					<button type="submit" class="btn btn-default">Add

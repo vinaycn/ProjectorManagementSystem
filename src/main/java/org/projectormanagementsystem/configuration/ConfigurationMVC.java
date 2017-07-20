@@ -1,4 +1,4 @@
-package org.projectorManagementSystem.configuration;
+package org.projectormanagementsystem.configuration;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;

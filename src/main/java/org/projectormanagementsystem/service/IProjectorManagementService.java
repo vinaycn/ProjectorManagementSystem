@@ -1,9 +1,9 @@
-package org.projectorManagementSystem.service;
+package org.projectormanagementsystem.service;
 
 import java.util.List;
 
-import org.projectorManagementSystem.modal.Projector;
-import org.projectorManagementSystem.modal.ReserveProjector;
+import org.projectormanagementsystem.modal.Projector;
+import org.projectormanagementsystem.modal.ReserveProjector;
 
 public interface IProjectorManagementService {
 
