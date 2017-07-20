@@ -34,7 +34,10 @@ public class ProjectorManagementService implements IProjectorManagementService {
 	private TeamRepo teamRepo;
 
 	/**
-	 * @param will take projector name
+	 * add the projector with given name
+	 * 
+	 * @param name
+	 *          will take projector name
 	 * @return will return list of the projector
 	 */
 	@Override
@@ -48,6 +51,8 @@ public class ProjectorManagementService implements IProjectorManagementService {
 	}
 
 	/**
+	 * return list of projectors 
+	 * 
 	 * @return Will return  list of the projectors
 	 */
 	@Override
@@ -58,10 +63,17 @@ public class ProjectorManagementService implements IProjectorManagementService {
 	}
 
 	/**
-	 * @param will take the teamId
-	 * @param starttime requested from the user
-	 * @param endtime requested from the user
-	 * @return the approriate messages 
+	 * 
+	 * take the request to reserve the projector
+	 * 
+	 * @param teamId
+	 *          will take the teamId
+	 * @param startTime
+	 *          starttime requested from the user to book the projector
+	 *          
+	 * @param endTime
+	 *          endtime requested from the user to book the projector
+	 * @return the approriate message if the the projector is reserved or not 
 	 */
 	@Override
 	@Transactional
@@ -96,7 +108,11 @@ public class ProjectorManagementService implements IProjectorManagementService {
 	}
 
 	/**
-	 * @param will take the list of the reservedProjectorLists
+	 * will return the latest available projectors based on the reservedProjectorList 
+	 * 
+	 * 
+	 * @param reservedProjectorList
+	 *          list of reservedProjector
 	 * @return will return next available projector in the systems
 	 */
 	@Override
@@ -109,7 +125,11 @@ public class ProjectorManagementService implements IProjectorManagementService {
 	}
 
 	/**
-	 * @param will take the id of the projector to delete
+	 * 
+	 * delete the project for the given id
+	 * 
+	 * @param id
+	 *          projector id to delete
 	 * @return will return the list of the projectors
 	 */
 	@Override
@@ -121,8 +141,13 @@ public class ProjectorManagementService implements IProjectorManagementService {
 	}
 
 	/**
-	 * @param will take the id to delete the projector request
-	 * @return list of the reserve projector
+	 * 
+	 * delete the projector request for the given id
+	 * 
+	 * @param  id
+	 *           projector request id to delete 
+	 *           
+	 * @return list of the reserved projector
 	 */
 	@Override
 	@Transactional
@@ -133,8 +158,13 @@ public class ProjectorManagementService implements IProjectorManagementService {
 	}
 
 	/**
-	 * @param reservedProjector list
-	 * @param projector list
+	 * 
+	 * will find the next available projector in the system which can be booked
+	 * 
+	 * @param reserveProjectorList
+	 *           list the projector reserved in the given time
+	 * @param projectorList
+	 *           list of the available projector
 	 * @return return the available project which can be reserved
 	 */
 	@Override
