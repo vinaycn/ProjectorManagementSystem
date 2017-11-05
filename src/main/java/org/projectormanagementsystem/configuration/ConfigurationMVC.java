@@ -24,7 +24,6 @@ public class ConfigurationMVC extends WebMvcConfigurerAdapter {
 		return internalResourceViewResolver;
 	}
 	
-	
 	@Bean
 	public DateFormat getSimpleDateFormat(){
 		DateFormat sdf = new SimpleDateFormat("MM/dd/yyyy HH:mm");
